@@ -30,7 +30,7 @@ def answer():
     if messages[:4]=='http':
         URL_Link=messages
         messages=''
-        messages+='<a href="',URL_Link,'">',URL_Link,'</a>'
+        messages+='<a href="'+str(URL_Link)+'">'+str(URL_Link)+'</a>'
         message_html += '<div role="alert">{0}</div>\n'.format(messages)
     else:
         for i in range(len(messages)):
