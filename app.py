@@ -28,10 +28,8 @@ def answer():
     message_html = ''
     global URL_Link
     if messages[:4]=='http':
-        URL_Link=messages
-        messages=''
-        messages+='<a href="'+str(URL_Link)+'">'+str(URL_Link)+'</a>'
-        message_html += '<div role="alert">{0}</div>\n'.format(messages)
+        message_html+='<a href="'+str(messages)+'">'+str(messages)+'</a>'
+
     else:
         for i in range(len(messages)):
             message = messages[i]
