@@ -5,7 +5,7 @@ app = Flask(__name__)
 kinoko_count = 3
 takenoko_count = 5
 messages = ['Kinoko is wonrderful!', 'Takenoko is awesome!']
-
+URL_Link=''
 @app.route('/')
 def top():
     return render_template('index.html', **vars())
@@ -26,6 +26,11 @@ def answer():
     takenoko_percent = takenoko_count / (kinoko_count + takenoko_count) * 100
 
     message_html = ''
+    global URL_Link
+    if str[:4]=='http':
+        URL_Link=messages
+        messages=''
+        messages+='<a href="',messages,'">',messages,'</a>'
     for i in range(len(messages)):
         message = messages[i]
         message = re.sub(r'&', r'&amp;', message)
