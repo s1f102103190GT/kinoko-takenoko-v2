@@ -30,7 +30,7 @@ def answer():
     if str[:4]=='http':
         URL_Link=messages
         messages=''
-        messages+='<a href="',URL_Link,'">',URL_Link,'</a>'
+        messages+=['<a href="',URL_Link,'">',URL_Link,'</a>']
     for i in range(len(messages)):
         message = messages[i]
         message = re.sub(r'&', r'&amp;', message)
