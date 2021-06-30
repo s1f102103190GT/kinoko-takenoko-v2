@@ -26,7 +26,7 @@ def answer():
     takenoko_percent = takenoko_count / (kinoko_count + takenoko_count) * 100
 
     message_html = ''
-    if messages[:4]=='http':
+    if 'http'==messages[:4]:
         message_html+='<a href="'+str(messages)+'">'+str(messages)+'</a>'
 
     else:
