@@ -26,7 +26,6 @@ def answer():
     takenoko_percent = takenoko_count / (kinoko_count + takenoko_count) * 100
 
     message_html = ''
-    global URL_Link
     if messages[:4]=='http':
         message_html+='<a href="'+str(messages)+'">'+str(messages)+'</a>'
 
