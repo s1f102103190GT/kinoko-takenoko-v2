@@ -27,7 +27,7 @@ def answer():
 
     message_html = ''
     if 'http'in messages:
-        message_html+='<a href="'+str(messages)+'">'+str(messages)+'</a>'
+        message_html='<a href="'+str(messages)+'">'+str(messages)+'</a>'
 
     else:
         for i in range(len(messages)):
